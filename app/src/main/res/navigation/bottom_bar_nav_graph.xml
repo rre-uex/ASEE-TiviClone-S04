@@ -9,6 +9,10 @@
         android:id="@+id/action_discoverFragment_to_showDetailFragment"
         app:destination="@id/showDetailFragment" />
 
+    <action
+        android:id="@+id/action_home_to_settingsFragment"
+        app:destination="@id/settingsFragment" />
+
     <fragment
         android:id="@+id/discoverFragment"
         android:name="es.unex.giiis.asee.tiviclone.view.home.DiscoverFragment"
@@ -34,4 +38,8 @@
             android:name="show"
             app:argType="es.unex.giiis.asee.tiviclone.model.Show" />
     </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="es.unex.giiis.asee.tiviclone.view.home.SettingsFragment"
+        android:label="Settings" />
 </navigation>

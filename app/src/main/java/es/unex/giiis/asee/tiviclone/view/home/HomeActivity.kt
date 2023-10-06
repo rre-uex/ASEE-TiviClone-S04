@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
@@ -67,7 +66,8 @@ class HomeActivity : AppCompatActivity(), DiscoverFragment.OnShowClickListener, 
 
         // Hide toolbar and bottom navigation when in detail fragment
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            if(destination.id == R.id.showDetailFragment) {
+            if ((destination.id == R.id.showDetailFragment) ||
+                (destination.id == R.id.settingsFragment)){
              //   binding.toolbar.visibility = View.GONE
                 binding.toolbar.menu.clear()
                 binding.bottomNavigation.visibility = View.GONE
@@ -102,7 +102,8 @@ class HomeActivity : AppCompatActivity(), DiscoverFragment.OnShowClickListener, 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.action_settings -> {
             // User chooses the "Settings" item. Show the app settings UI.
-            Toast.makeText(this, "Settings option", Toast.LENGTH_SHORT).show()
+            val action = DiscoverFragmentDirections.actionHomeToSettingsFragment()
+            navController.navigate(action)
             true
         }
 
