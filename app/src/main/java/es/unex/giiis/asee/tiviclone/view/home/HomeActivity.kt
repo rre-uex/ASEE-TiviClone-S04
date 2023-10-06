@@ -20,7 +20,7 @@ import es.unex.giiis.asee.tiviclone.databinding.ActivityHomeBinding
 import es.unex.giiis.asee.tiviclone.model.Show
 import es.unex.giiis.asee.tiviclone.model.User
 
-class HomeActivity : AppCompatActivity(), DiscoverFragment.OnShowClickListener {
+class HomeActivity : AppCompatActivity(), DiscoverFragment.OnShowClickListener, LibraryFragment.OnShowClickListener {
     private lateinit var binding: ActivityHomeBinding
     private lateinit var appBarConfiguration: AppBarConfiguration
     private val navController by lazy {

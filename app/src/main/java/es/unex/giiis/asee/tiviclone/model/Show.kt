@@ -7,6 +7,7 @@ data class Show(
     val description: String,
     val year: String,
     val seasons: String,
+    var isFavorite: Boolean,
     val image: Int,
     val coverImage: Int,
     val genres: List<String> = emptyList()

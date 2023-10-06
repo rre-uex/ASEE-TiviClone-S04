@@ -67,9 +67,6 @@ class DiscoverFragment : Fragment() {
         setUpRecyclerView()
     }
 
-    fun setUpUI() {
-    }
-
     private fun setUpRecyclerView() {
         adapter = DiscoverAdapter(shows = dummyShows, onClick = {
             listener.onShowClick(it)
