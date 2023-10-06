@@ -34,7 +34,12 @@ class ShowDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val show = args.show
-        binding.tvShowTitle.text = "${show.title} details"
+        binding.tvShowTitle.text = show.title
+        binding.tvDescription.text = show.description
+        binding.tvYear.text = show.year
+        binding.swFav.isChecked = show.isFavorite
+        binding.coverImg.setImageResource(show.image)
+        binding.bannerImg.setImageResource(show.banner)
         Log.d(TAG, "Showing ${show.title} details")
     }
 

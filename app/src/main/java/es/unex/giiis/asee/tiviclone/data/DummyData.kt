@@ -11,17 +11,17 @@ val dummyShows: List<Show> = listOf(
         "05",
         true,
         R.drawable.breakingbad,
-        R.drawable.breakingbad
+        R.drawable.breakingbad_banner
 
     ),
     Show(
         "Sex Education",
-        "Como el tímido Otis tiene todas las respuestas para dudas sobre sexo porque su madre es sexóloga, su compañera Maeve le propone montar una consulta en el instituto.",
+        "Socially awkward high school student Otis may not have much experience in the lovemaking department, but he gets good guidance on the topic in his personal sex ed course -- living with mom Jean, who is a sex therapist.",
         "2019",
         "04",
         true,
         R.drawable.sexeducation1,
-        R.drawable.breakingbad
+        R.drawable.sexeducation_banner
     ),
     Show(
         "The Wire",
@@ -30,7 +30,7 @@ val dummyShows: List<Show> = listOf(
         "01",
         true,
         R.drawable.the_wire,
-        R.drawable.breakingbad
+        R.drawable.the_wire_banner
     ),
     Show(
         "Succession",
@@ -39,7 +39,7 @@ val dummyShows: List<Show> = listOf(
         "04",
         true,
         R.drawable.sucession,
-        R.drawable.breakingbad
+        R.drawable.sucession_banner
     ),
     Show(
         "Breaking Bad",
@@ -48,17 +48,17 @@ val dummyShows: List<Show> = listOf(
         "05",
         true,
         R.drawable.breakingbad,
-        R.drawable.breakingbad
+        R.drawable.breakingbad_banner
 
     ),
     Show(
         "Sex Education",
-        "Como el tímido Otis tiene todas las respuestas para dudas sobre sexo porque su madre es sexóloga, su compañera Maeve le propone montar una consulta en el instituto.",
+        "Socially awkward high school student Otis may not have much experience in the lovemaking department, but he gets good guidance on the topic in his personal sex ed course -- living with mom Jean, who is a sex therapist. ",
         "2019",
         "04",
         true,
         R.drawable.sexeducation1,
-        R.drawable.breakingbad
+        R.drawable.sexeducation_banner
     ),
     Show(
         "The Wire",
@@ -67,7 +67,7 @@ val dummyShows: List<Show> = listOf(
         "01",
         true,
         R.drawable.the_wire,
-        R.drawable.breakingbad
+        R.drawable.the_wire_banner
     ),
     Show(
         "Succession",
@@ -76,6 +76,6 @@ val dummyShows: List<Show> = listOf(
         "04",
         true,
         R.drawable.sucession,
-        R.drawable.breakingbad
+        R.drawable.sucession_banner
     )
 )

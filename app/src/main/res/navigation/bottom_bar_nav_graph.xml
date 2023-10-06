@@ -28,7 +28,7 @@
     <fragment
         android:id="@+id/showDetailFragment"
         android:name="es.unex.giiis.asee.tiviclone.view.home.ShowDetailFragment"
-        android:label="fragment_show_detail"
+        android:label="Show detail"
         tools:layout="@layout/fragment_show_detail" >
         <argument
             android:name="show"

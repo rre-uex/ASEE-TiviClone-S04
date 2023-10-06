@@ -9,6 +9,6 @@ data class Show(
     val seasons: String,
     var isFavorite: Boolean,
     val image: Int,
-    val coverImage: Int,
+    val banner: Int,
     val genres: List<String> = emptyList()
 ) : Serializable
