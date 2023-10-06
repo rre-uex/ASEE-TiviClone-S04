@@ -6,8 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import es.unex.giiis.asee.tiviclone.R
-import es.unex.giiis.asee.tiviclone.databinding.ActivityHomeBinding
 import es.unex.giiis.asee.tiviclone.databinding.FragmentDiscoverBinding
 import androidx.recyclerview.widget.LinearLayoutManager
 import es.unex.giiis.asee.tiviclone.model.Show
@@ -25,6 +23,11 @@ private const val ARG_PARAM2 = "param2"
  */
 class DiscoverFragment : Fragment() {
 
+    private lateinit var listener: OnShowClickListener
+    interface OnShowClickListener {
+        fun onShowClick(show: Show)
+    }
+
     private var _binding: FragmentDiscoverBinding? = null
     private val binding get() = _binding!!
     private lateinit var adapter: DiscoverAdapter
@@ -41,10 +44,19 @@ class DiscoverFragment : Fragment() {
         }
     }
 
+    override fun onAttach(context: android.content.Context) {
+        super.onAttach(context)
+        if (context is OnShowClickListener) {
+            listener = context
+        } else {
+            throw RuntimeException(context.toString() + " must implement OnShowClickListener")
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentDiscoverBinding.inflate(inflater, container, false)
         return binding.root
@@ -60,7 +72,7 @@ class DiscoverFragment : Fragment() {
 
     private fun setUpRecyclerView() {
         adapter = DiscoverAdapter(shows = dummyShows, onClick = {
-            Toast.makeText(context, "click on: "+it.title, Toast.LENGTH_SHORT).show()
+            listener.onShowClick(it)
         },
             onLongClick = {
                 Toast.makeText(context, "long click on: "+it.title, Toast.LENGTH_SHORT).show()
